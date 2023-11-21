@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg {
+    background-image: url(../images/Byrd/ByrdColor2.jpg);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    z-index: -1;
+
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(80, 185, 191, 0.5);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.logo {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+    margin: 3rem 0 0 0;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    padding: 1.2rem;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h3,
+.info {
+    text-align: center;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 4px #17e3cf;
+    margin-bottom: 1rem;
+}
+
+.info a {
+    color: #17e3cf;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.info a:hover {
+    color: #19a2a2;
+    text-shadow: 3px 3px 4px #000;
+}
+
+/* COUNTDOWN TIMER */
+
+.countdown-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    color: #000;
+    text-shadow: 3px 3px 4px #c9dfdd;
+}
+
+.countdown-wrapper h1 {
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: #000;
+    background: linear-gradient(to bottom,
+            rgba(23, 227, 207, 0.8),
+            rgba(23, 156, 227, 0.8));
+    text-shadow: 3px 3px 4px #17e3cf;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.countdown div {
+    width: 6rem;
+    height: 5rem;
+    background: linear-gradient(to bottom,
+            rgba(23, 227, 207, 0.8),
+            rgba(23, 156, 227, 0.8));
+    margin: 0 1.5rem 0 0.6rem;
+    font-size: 2rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 0;
+}
+
+.countdown div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.24rem;
+    /* background-color: #17181b; */
+}
+
+.countdown div::after {
+    content: attr(data-content);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    position: absolute;
+    bottom: -3rem;
+}
+
+/* FOOTER INFORMATION */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* MEDIA QUERIES */
